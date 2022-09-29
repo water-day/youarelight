@@ -1,0 +1,491 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: #000;}
+ul{list-style: none;}
+body{
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    font-family: 'Pretendard-Regular';
+    min-width: 1320px;
+    background: url(./shop_img/back.png);
+}
+
+/*헤더영역*/    
+#main{
+    background-color: #fff;
+    width: 1920px;
+}
+#header{
+    width: 1320px;
+    height: 100px;
+    margin: auto;
+    padding-top: 50px;
+    display: block;
+}
+#header> .header_inner{
+    background-color: #fff;
+    height: 100px;
+    width: 1320px;
+    margin: auto;
+    display: block;
+    position: relative;
+    border-radius: 10px 10px 10px;
+}
+.logo{
+    float: left;
+    margin: 10px 50px;
+}
+.nav> li{
+    float: left;
+    padding: 40px 20px;
+
+}
+.nav> li> a{
+    font-family: 'Source Serif Pro';
+    letter-spacing: 1px;
+
+}
+.nav> li> a:hover{
+    font-weight: bold;
+    color: #cdb87e;
+}
+.nav> li:nth-child(1){
+    margin-left: 200px;
+}
+
+.header_inner> p{
+    float: right;
+    margin: 40px 30px 0;
+    font-size: 14px;
+}
+.header_inner> p> a{
+    color: #777;
+}
+.header_inner> p> a:hover{
+    color: #cdb87e;
+    font-weight: bold;
+}
+
+/*서브메뉴*/
+.sub{
+    position: absolute;/*기준은#main에*/
+    width: 1320px;
+    height: 300px;
+    background-color: #ebe0c6;
+    left: 0;
+    top: 100px;
+    display: none;
+    z-index: 99;
+}
+
+.sub .s_inner{
+    width: 1320px;
+    height: 300px;
+    margin: 0 auto;
+    opacity: 100%;
+    display: block;
+}
+.sub .s_inner ul{
+    float: left;
+    margin: 20px 30px;
+}
+.sub .s_inner h4{
+    color: #7a6960;
+}
+.sub .s_inner ul li a{
+    font-size: 14px;
+    color: #333;
+}
+.sub .s_inner ul li:nth-child(1){
+    font-family: 'Source Serif Pro';
+    margin-bottom: 20px;
+}
+h4{
+    margin-left: 30px;
+    font-family: 'Source Serif Pro';
+    color: #7a6960;
+}
+
+/*서브메뉴왼쪽*/
+.s_inner .s_left{
+    width: 600px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 350px;
+}
+.s_inner .s_left ul li{
+    margin-bottom: 10px;
+}
+
+.s_inner .s_left ul li a:hover{
+    font-weight: bold;
+    color: #7a6960;;
+}
+
+/*서브메뉴오른쪽*/
+.s_inner .s_right{
+    width: 350px;
+    float: right;
+    margin: 40px auto;
+    display: block;
+}
+.s_inner .s_right p{
+    font-family: 'Source Serif Pro';
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    color: #4b3826;
+}
+
+
+.shampoo{
+    margin-top: -6px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.shampoo1{
+    width: 1320px;
+    height: 550px;
+    margin: 50px auto;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+.shampoo1 p{
+    font-size: 14px;
+    color: #c9a87d;
+    margin-bottom: 8px;
+}
+.shampoo1 h4{
+    text-align: center;
+    font-size: 12px;
+    color: #9b7d57;
+    font-weight: 700;
+    margin: 0 auto;
+}
+.shampoo1 h3{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    margin: 0 auto;
+}
+.s_img{
+    display: inline-block;
+}
+
+
+.sp01{
+    float: left;
+    margin-left: 160px;
+    height: 355px;
+    position: relative;
+}
+
+.sp02 h3:hover, .sp01 h3:hover, .sp03 h3:hover,
+.tr01 h3:hover,.tr02 h3:hover{
+    text-decoration: underline;
+    color: #c9a87d;
+
+}
+.sp02{
+    float: left;
+    margin: 0 80px;
+    height: 355px;
+    position: relative;
+}
+.sp03{
+    float: left;
+    margin-right: 160 px;
+    height: 355px;
+    position: relative;
+}
+
+.best{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+}
+.best2{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+}
+.new{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+}
+
+
+
+/*컨텐츠2_이미지확대효과*/
+.sp01> div, .sp02> div, .sp03> div{
+   overflow: hidden;
+   position: relative;/*박스의 기준*/
+   border-radius: 150px 150px 0 0 ;
+}
+.sp01:hover img, .sp02:hover img, .sp03:hover img{
+    transform: scale(1.1, 1.1);
+}
+.sp01 img, .sp02 img, .sp03 img{
+    transition: all 1s;
+}
+
+.sp01:hover img, .sp02:hover img, .sp03:hover img{
+    transform: scale(1.1, 1.1);
+    /* transition: all 1s;
+    호버에 트랜지션을 넣으면 호버했을 때(마우스를 올릴 때)는 스륵륵 변화함. 하지만 마우스가 벗어났을 때 바로 돌아옴. */
+}
+.sp01 img, .sp02 img, .sp03 img {
+    transition: all 1s;
+    /* 호버했을 때도 마우스가 벗어났을 때도 스륵륵 변화함. */
+}
+
+.sp01_1{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 290px;
+    padding-left: 140px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    /*박스를 다 꾸미고 투명하게 만든다. display:none은 안됨!!*/
+    opacity: 0;
+    transition: all 1s;
+    box-sizing: border-box;
+}
+.sp01_1 a{
+    margin-left: 5px;
+    display: inline-block;
+}
+.sp01:hover .sp01_1, .sp02:hover .sp01_1,.sp03:hover .sp01_1{
+    opacity: 1;
+    top: 0;
+}
+
+
+.sp01_1 img{
+    filter: grayscale(0.5);
+    opacity: 0.7;
+}
+.sp01_1 img:hover{
+    filter: grayscale(0);
+    opacity: 1;
+}
+/*shampoo*/
+
+.tt{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+.treatment{
+    width: 1320px;
+    height: 550px;
+    margin: 50px auto;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+
+}
+.treatment p{
+    font-size: 14px;
+    color: #c9a87d;
+    margin-bottom: 8px;
+}
+.treatment h4{
+    text-align: center;
+    font-size: 12px;
+    color: #9b7d57;
+    font-weight: 700;
+    margin: 0 auto;
+}
+.treatment h3{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+
+.tr01{
+    float: left;
+    margin-left: 380px;
+    height: 355px;
+
+}
+.tr02{
+    float: left;
+    margin-left: 190px;
+    height: 355px;
+    position: relative;
+
+}
+.treatment .best3{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+}
+
+.best4{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+}
+.best5{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+}
+
+.essence{
+    width: 100%;
+}
+
+
+
+/*컨텐츠2_이미지확대효과*/
+.tr01> div, .tr02> div{
+   overflow: hidden;
+   position: relative;/*박스의 기준*/
+   border-radius: 150px 150px 0 0 ;
+}
+.tr01:hover img, .tr02:hover img{
+    transform: scale(1.1, 1.1);
+}
+.tr01 img, .tr02 img{
+    transition: all 1s;
+}
+
+.tr01:hover img, .tr02:hover img{
+    transform: scale(1.1, 1.1);
+    /* transition: all 1s;
+    호버에 트랜지션을 넣으면 호버했을 때(마우스를 올릴 때)는 스륵륵 변화함. 하지만 마우스가 벗어났을 때 바로 돌아옴. */
+}
+.tr01 img, .tr02 img {
+    transition: all 1s;
+    /* 호버했을 때도 마우스가 벗어났을 때도 스륵륵 변화함. */
+}
+
+.tr01_1{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 290px;
+    padding-left: 140px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    /*박스를 다 꾸미고 투명하게 만든다. display:none은 안됨!!*/
+    opacity: 0;
+    transition: all 1s;
+    box-sizing: border-box;
+    
+
+}
+.tr01_1 a{
+    margin-left: 5px;
+    display: inline-block;
+}
+.tr01:hover .tr01_1, .tr02:hover .tr01_1{
+    opacity: 1;
+    top: 0;
+}
+
+.tr01_1 img{
+    filter: grayscale(0.5);
+    opacity: 0.7;
+}
+.tr01_1 img:hover{
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+
+/*treatment*/
+
+.event_benner img{
+    display: block;
+    width: 100%;
+}
+
+
+
+/*footer*/
+
+#footer{
+    width: 100%;
+    height: 300px;
+    background-color: #7a6960;
+}
+.f_inner{
+    width: 1320px;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.f_logo{
+    float: left;
+    width: 121px;
+    height: 109px;
+    padding-top: 47.5px;
+    padding-left: 20px;
+}
+.f_center{
+    width: 620px;
+    float: left;
+    margin: 0 100px;
+    padding-top: 50px;
+    padding-left: 60px;
+}
+.f_center h6{
+    font-family: 'Source Serif Pro';   
+    font-size: 24px;
+    color: #cdb87e;
+}
+.f_center p{
+    font-size: 14px;
+    color: #ffffff;
+    padding: 20px 0;
+}
+.f_center a{
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.f_right{
+    float: left;
+    width: 289px;
+    display: block;
+    padding-top: 50px;
+}
+.f_right h6{
+    font-family: 'Source Serif Pro';   
+    font-size: 24px;
+    color: #cdb87e;
+}
+
+.f_right a img{
+    padding: 20px 0;
+}
+.f_right a:hover image{
+    opacity: 70%;
+}
+.f_right a:hover img{
+    opacity: 60%;
+}
+
+
